@@ -11,7 +11,6 @@ ul li{
 
 a{
   text-decoration: none;
-  color: #000;
 }
 
 body{
@@ -21,7 +20,6 @@ body{
 }
 
 .navbar{
-  background: tomato;
   height: 70px;
 }
 
@@ -36,12 +34,13 @@ body{
 
 .header{
   height: 100%;
-  
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 150px 1fr;
   align-items: center;
   position: relative;
+  z-index: 1000;
+
 }
 
 .nav-bar{
@@ -76,7 +75,6 @@ body{
   background: #fff;
   margin-top: 1rem;
   border-radius: 8px;
-
 }
 .dropdown li > a{
   display: list-item;
@@ -94,34 +92,50 @@ body{
   justify-self: flex-end;
 }
 
+.btn{
+  padding: .7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+}
+.btn-bg{
+  background: #fff;
+  color: tomato;
+}
+
 .toggle-mobile{
   display: none;
 }
 
-@media (max-width: 720px){
+@media (max-width: 768px){
   .header{
     grid-template-columns: 1fr 1fr;
   }
-
   .menu-mobile{
     display: none;
   }
-
   .nav-bar{
     top: 70px;
     position: absolute;
-    background: red;
+    background: rgb(255, 255, 255);
+    border-radius: 0 0 12px 12px ;
     width: 100%;
     text-align: center;
+    grid-auto-flow: row;
+  }
+  .btn-header{
+    justify-self: center;
   }
   .nav-list{
-    display: flex;
-    flex-direction: column;
-
     padding: 1rem;
     grid-gap: 0;
+    border-bottom: 1px solid rgb(47, 120, 245);
+    display: grid;
+    grid-auto-flow: row;
+    list-style: none;
   }
- 
+  .dropdown{
+    background-color: rgb(114, 188, 252);
+  }
   .dropdown-active{
     position: inherit;
   }
@@ -131,19 +145,66 @@ body{
   .nav-list li a{
     padding: 1rem;
     display: block;
+    color: #000;
   }
   .btn-header{
     padding: 1rem;
-    border-top: 1px solid rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
-
   .toggle-mobile{
     display: block;
     justify-self: flex-end;
     font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #fff;
+  }
+}
+/* FIM NAVBAR */
+
+
+/* PRIMEIRA SEÇÃO */
+.intro{
+  height: 500px;
+  background: url('../images/bg-pattern-intro.svg'), tomato;
+  position: relative;
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: -350px;
+  top: -70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 0 0 140px;
+}
+
+.prelude{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.prelude h2{
+  font-size: 4em;
+  line-height: 1.5em;
+}
+
+.prelude p{
+  font-size: 1.5em;
+}
+
+@media (max-width: 800px){
+  .intro{
+    font-size: 63%;
   }
 }
 
-/* FIM NAVBAR */
+.section-design{
+  color: #000;
+  text-align: center;
+}

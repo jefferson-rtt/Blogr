@@ -20,10 +20,10 @@ function openDropdown3() {
 
 
 // TOGGLE MOBILE
-const openMenu = document.querySelector('.toggle-mobile').addEventListener('click', function(){
+
+const openMenu = document.querySelector('.toggle-mobile').addEventListener('click', () => {
   const navBar = document.querySelector('.nav-bar')
   navBar.classList.toggle('menu-mobile')
 })
-
 
 
