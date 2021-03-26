@@ -216,9 +216,6 @@ body{
   position: relative;
 }
 
-
-
-
 .box-design{
   margin-top: 70px;
 
@@ -228,11 +225,11 @@ body{
   text-align: start;
 }
 
-.box-design .text h2{
+.text h2{
   font-size: 1.25em;
   line-height: 4em;
 }
-.box-design .text p{
+.text p{
   font-size: .85em;
   line-height: 2em;
 }
@@ -249,7 +246,7 @@ body{
 .section-state-art{
   height: 400px;
   background-color: indigo;
-  margin-bottom: 100px;
+  margin-bottom: 10rem;
   border-radius: 0 100px 0 100px;
 }
 
@@ -268,12 +265,70 @@ body{
   height: 100%;
 }
 
-.box-state-art div{
-  grid-column: 2/3;
-}
 
-.box-state-art img{
+.box-state-art img {
   width: auto;
   position: relative;
   top: 25px;
+}
+
+/* last section */
+
+.last-img{
+  background: url('../images/illustration-laptop-desktop.svg');
+  background-size: cover;
+  position: relative;
+  top: -100px;
+  left: -70px;
+  background-position: center;
+  height: 600px;
+}
+
+/* footer */
+
+.footer{
+  height: 300px;
+  background-color: lightslategray;
+  padding-top: 3rem;
+}
+
+.box-footer{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.box-footer h4{
+  margin-bottom: 20px;
+}
+
+.box-footer ul li{
+  display: list-item;
+}
+.box-footer ul li a{
+  display: block;
+  color: rgb(69, 68, 68);
+  padding-top: .5rem;
+}
+
+.box-footer ul li a:hover{
+  color: #fff;
+}
+
+
+/* credits */
+.attribution{
+  background: rgb(245, 125, 74);
+  color: #fff;
+  text-align: center;
+  padding: .7rem 0;
+}
+
+.attribution a{
+  color: #fff;
+}
+.attribution a:hover{
+  color: rgba(242, 242, 242, 0.406);
 }
