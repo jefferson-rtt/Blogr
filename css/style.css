@@ -203,8 +203,77 @@ body{
     font-size: 63%;
   }
 }
+.btn-intro{
+  margin-top: 70px;
+}
+
+/* Seção Designed */
 
 .section-design{
   color: #000;
   text-align: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+
+
+
+.box-design{
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  text-align: start;
+}
+
+.box-design .text h2{
+  font-size: 1.25em;
+  line-height: 4em;
+}
+.box-design .text p{
+  font-size: .85em;
+  line-height: 2em;
+}
+
+.box-design .img{
+  background: url('../images/illustration-editor-desktop.svg');
+  background-size: cover;
+  position: relative;
+  top: -150px;
+  height: 600px;
+}
+
+/* Segunda Seção */
+.section-state-art{
+  height: 400px;
+  background-color: indigo;
+  margin-bottom: 100px;
+  border-radius: 0 100px 0 100px;
+}
+
+.state{
+  height: 100%;
+}
+
+
+.box-state-art{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  grid-gap: 20px;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.box-state-art div{
+  grid-column: 2/3;
+}
+
+.box-state-art img{
+  width: auto;
+  position: relative;
+  top: 25px;
 }
