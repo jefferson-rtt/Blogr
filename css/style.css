@@ -4,10 +4,9 @@
   box-sizing: border-box;
 }
 
-:root{
-  --font-title: 'Overpass', sans-serif;
+:root {
+  --font-title: "Overpass", sans-serif;
 }
-
 
 ul li {
   list-style: none;
@@ -24,10 +23,9 @@ h2 {
   color: hsl(208, 49%, 24%);
 }
 p {
-  font-size: .90em;
-  line-height: 2em;
+  line-height: 2rem;
   color: hsl(207, 13%, 34%);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 body {
@@ -113,13 +111,14 @@ body {
   border-radius: 25px;
   font-weight: 500;
   color: #fff;
+  font-family: "Ubuntu", sans-serif;
 }
 .btn-bg {
   background: #fff;
   color: tomato;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-.btn-bg:hover{
+.btn-bg:hover {
   background: hsl(355, 100%, 74%);
   color: #fff;
 }
@@ -217,17 +216,12 @@ body {
 }
 
 .prelude p {
-  font-weight: 300;
   font-size: 1.35em;
   font-family: var(--font-title);
   color: #fff;
 }
 
-@media (max-width: 800px) {
-  .intro {
-    font-size: 73%;
-  }
-}
+
 .btn-intro {
   margin-top: 70px;
 }
@@ -240,37 +234,35 @@ body {
   margin-top: 40px;
   position: relative;
 }
-section{
+section {
   font-family: var(--font-title);
 }
-.title-design{
+.title-design {
   font-size: 2em;
 }
 
 .box-design {
   margin-top: 70px;
-
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 2fr;
   grid-gap: 30px;
   text-align: start;
+  height: 500px;
+  margin-bottom: 200px;
 }
 
-.box-design_gridrow{
+.box-design_gridrow {
   display: grid;
   grid-auto-flow: row;
   grid-gap: 20px;
-  height: 400px;
+  height: 500px;
 }
 
-
-
 .box-design .img {
-  background: url("../images/illustration-editor-desktop.svg");
-  background-size: cover;
-  position: relative;
-  top: -150px;
-  height: 600px;
+  height: 1000px;
+}
+.box-design .img img{
+  width: 100%;
 }
 
 /* Segunda Seção */
@@ -279,7 +271,6 @@ section{
   background-color: indigo;
   margin-bottom: 10rem;
   border-radius: 0 100px 0 100px;
-
 }
 
 .state {
@@ -296,13 +287,13 @@ section{
   height: 100%;
 }
 
-.text > h2{
+.text > h2 {
   font-size: 2em;
   color: #fff;
 }
-.text > p{
-  font-size: 1em;
-  font-weight: 300;
+.text > p {
+  font-size: .85rem;
+  font-weight: 400;
   color: #fff;
 }
 .box-state-art img {
@@ -327,7 +318,7 @@ section{
 
 .footer {
   height: 300px;
-  background-color:#25252d;
+  background-color: #25252d;
   padding-top: 3rem;
 }
 
@@ -337,6 +328,7 @@ section{
   grid-template-columns: auto;
   grid-template-rows: auto;
   gap: 20px;
+  padding-bottom: 20px;
 }
 
 .box-footer h4 {
@@ -345,7 +337,7 @@ section{
 
 .box-footer ul li {
   display: list-item;
-  padding: .2rem;
+  padding: 0.2rem;
 }
 .box-footer ul li a {
   display: block;
@@ -370,4 +362,79 @@ section{
 }
 .attribution a:hover {
   color: rgba(242, 242, 242, 0.406);
+}
+
+/* Section Mobile */
+@media (max-width: 500px) {
+  body {
+    font-size: 83%;
+  }
+  .container{
+    padding: 0 10px;
+  }
+  .prelude h2{
+    font-size: 2rem;
+  }
+  .prelude p{
+    margin-top: 20px;
+  }
+  .section-design{
+    margin: 0;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  .img{
+    order: -1;
+  }
+  .section-state-art{
+    height: 600px;
+  }
+  .box-state-art{
+    display: flex;
+    flex-direction: column;
+  }
+  .box-state-art img{
+    top: -200px;
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .text{
+    position: relative;
+    top: -200px;
+  }
+  .section-design_secondary{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+
+
+
+
+
+
+
+
+  .footer{
+    height: auto;
+  }
+  .box-footer{
+    grid-auto-flow: row;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+
 }
